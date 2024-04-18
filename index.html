@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- OG TAGS -->
+    <meta property="og:title" content="Web Calculator" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./assets/calc-img.png" />
+    <meta
+      property="og:url"
+      content="https://abhisheksuwalka.github.io/OIBSIP/01-calculator/index.html"
+    />
+    <meta
+      property="og:description"
+      content="Web Calculator"
+    />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Web Calculator" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="calculator">
+        <div class="calculatorDisplay">
+          <div class="previousEquation"> <span class="previousEqn" id="previousEqn">HE110 W0R1D</span></div>
+          <div class="displayValue"><span class="currentEqn" id="currentEqn">0</span></div>
+        </div>
+        <input type="button" onclick="addToDisplay(this.value)" class="keys topRow leftBracket" value="(">
+        <input type="button" onclick="addToDisplay(this.value)" class="keys topRow rightBracket" value=")">
+        <input type="button" onclick="addToDisplay(this.value)" class="keys topRow ans" value="ans">
+        <input type="button" onclick="deleteFromEnd()" class="keys topRow del" value="del">
+        <input type="button" onclick="clearDisplay(this.id)" class="keys topRow clear" id='clearDisplay' value="clr">
+        <input type="button" onclick="addToDisplay(this.value)" class="keys number seven" value="7">
+        <input type="button" onclick="addToDisplay(this.value)" class="keys number eight" value="8">
+        <input type="button" onclick="addToDisplay(this.value)" class="keys number nine" value="9">
+        <input type="button" onclick="percentageOf()" class="keys operators percentage" value="%">
+        <input type="button" onclick="sqrRootThis()" class="keys operators sqrRoot" value="√">
+        <input type="button" onclick="addToDisplay(this.value)" class="keys number four" value="4">
+        <input type="button" onclick="addToDisplay(this.value)" class="keys number five" value="5">
+        <input type="button" onclick="addToDisplay(this.value)" class="keys number six" value="6">
+        <input type="button" onclick="addToDisplay('*')" class="keys operators multiple" value="x">
+        <input type="button" onclick="addToDisplay('/')" class="keys operators divide" value="÷">
+        <input type="button" onclick="addToDisplay(this.value)" class="keys number one" value="1">
+        <input type="button" onclick="addToDisplay(this.value)" class="keys number two" value="2">
+        <input type="button" onclick="addToDisplay(this.value)" class="keys number three" value="3">
+        <input type="button" onclick="addToDisplay(this.value)" class="keys operators plus" value="+">
+        <input type="button" onclick="addToDisplay(this.value)" class="keys operators minus" value="-">
+        <input type="button" onclick="addToDisplay(this.value)" class="keys dot" value=".">
+        <input type="button" onclick="addToDisplay(this.value)" class="keys number zero" value="0">
+        <input type="button" onclick="changeSignOfCurrentEqn()" class="keys operators changeSign" value="±">
+        <input type="button" onclick="evaluateCurrentEqn()" class="keys equalTo" value="ENTER">
+      </div>
+      <div class="socials">
+        <div class="icons linkedin">
+          <a href="https://www.linkedin.com/in/abhisheksuwalka/">
+            <img src="./assets/icons/linkedin.png" alt="linkedin icon">
+          </a>
+        </div>
+        <div class="icons twitter">
+          <a href="https://twitter.com/maik0z">
+            <img src="./assets/icons/twitter.png" alt="twitter icon">
+          </a>
+        </div>
+        <div class="icons fb">
+          <a href="https://github.com/Abhisheksuwalka">
+            <img src="./assets/icons/github-logo.png" alt="github icon">
+          </a>
+        </div>
+        <div class="icons yt">
+          <a href="https://www.youtube.com/@abhisheksuwalka2487">
+            <img src="./assets/icons/youtube.png" alt="youtube icon">
+          </a>
+        </div>
+        <div class="icons theme" id="changeTheme">
+          <img src="./assets/icons/change-mode.png" alt="change mode icon">
+        </div>
+      </div>
+    </div>
+    </div>
+    <script src="scripts.js"></script>
+  </body>
+</html>
